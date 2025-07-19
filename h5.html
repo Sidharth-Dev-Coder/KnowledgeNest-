@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ch 5 - Pastoralists in the Modern World</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .top-bar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f8d;
+      padding-left: 15px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 5 – Pastoralists in the Modern World</h1>
+
+    <h2>Introduction</h2>
+    <p>This chapter explores the lives of pastoral communities who depend on animal herding for livelihood. It shows how colonial policies affected them in India and Africa.</p>
+
+    <h2>Pastoral Communities in India</h2>
+    <p>Pastoralists lived in various regions like the mountains, plateaus, and deserts. They moved from one place to another in search of pasture and water for their animals.</p>
+
+    <h2>Types of Indian Pastoralists</h2>
+    <ul>
+      <li><strong>Gujjars</strong> in Jammu and Garhwal</li>
+      <li><strong>Gaddis</strong> in Himachal Pradesh</li>
+      <li><strong>Banjaras</strong> in Uttar Pradesh</li>
+      <li><strong>Maldharis</strong> in Gujarat</li>
+      <li><strong>Dhangars</strong> in Maharashtra</li>
+    </ul>
+
+    <h2>Colonial Impact on Pastoralists</h2>
+    <p>British policies changed the lives of pastoralists significantly:</p>
+    <ul>
+      <li>Wasteland rules – marked grazing land as government property</li>
+      <li>Forest Acts – restricted access to forest resources</li>
+      <li>Criminal Tribes Act – labeled many pastoral groups as criminals</li>
+      <li>Taxation – imposed grazing taxes and increased financial burden</li>
+    </ul>
+
+    <h2>Adaptation and Resistance</h2>
+    <ul>
+      <li>Some settled permanently and took to agriculture</li>
+      <li>Others migrated to new regions or changed routes</li>
+      <li>Some resisted through protests and petitions</li>
+    </ul>
+
+    <h2>Pastoralism in Africa</h2>
+    <p>
+      African pastoral groups like the Maasai were also affected by European colonialism. Their grazing lands were taken over and they were forced into reserves.
+    </p>
+
+    <h2>Effects of Colonial Rule in Africa</h2>
+    <ul>
+      <li>Land alienation – best grazing lands taken by European settlers</li>
+      <li>Restriction on movement</li>
+      <li>Taxation and enforced labor</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+      Colonial policies caused major disruptions in the lives of pastoralists, both in India and Africa. Despite this, many communities adapted in new ways to survive.
+    </p>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1 - Number Systems | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9; color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      order: 2;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      color: white;
+      border: none;
+      order: 1;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #2c4cb2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f99;
+      padding-left: 20px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-top: 60px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #2563eb;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .note-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="note-card">
+      <h1>Chapter 1: Number Systems</h1>
+      <p><strong>Topics Covered:</strong></p>
+      <ul>
+        <li>Real Numbers</li>
+        <li>Irrational Numbers</li>
+        <li>Representation on Number Line</li>
+        <li>Operations on Real Numbers</li>
+        <li>Laws of Exponents</li>
+      </ul>
+
+      <h2>1. Real Numbers</h2>
+      <p>The collection of rational and irrational numbers is called real numbers. Every point on the number line represents a unique real number.</p>
+
+      <h2>2. Irrational Numbers</h2>
+      <ul>
+        <li>Numbers that cannot be expressed in the form of p/q where q ≠ 0.</li>
+        <li>Examples: √2, π, √3, etc.</li>
+      </ul>
+
+      <h2>3. Representation of √2 on the Number Line</h2>
+      <p>Using Pythagoras theorem, draw a right-angled triangle with base 1 unit and height 1 unit, then use compass to represent √2 on number line.</p>
+
+      <h2>4. Operations on Real Numbers</h2>
+      <ul>
+        <li>Closure: Real numbers are closed under addition, subtraction, multiplication and division (except by 0).</li>
+        <li>Commutative: a + b = b + a and a × b = b × a</li>
+        <li>Associative: (a + b) + c = a + (b + c)</li>
+        <li>Distributive: a × (b + c) = ab + ac</li>
+      </ul>
+
+      <h2>5. Laws of Exponents for Real Numbers</h2>
+      <ul>
+        <li>a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></li>
+        <li>(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></li>
+        <li>a<sup>m</sup>/a<sup>n</sup> = a<sup>m-n</sup></li>
+        <li>a<sup>0</sup> = 1 (a ≠ 0)</li>
+        <li>(ab)<sup>m</sup> = a<sup>m</sup> × b<sup>m</sup></li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>This chapter forms the foundation of number theory and helps understand how different types of numbers behave under various operations.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        this.nextElementSibling.style.display = this.nextElementSibling.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

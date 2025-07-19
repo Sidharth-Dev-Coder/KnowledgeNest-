@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geography - Chapter 6 | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      z-index: 1002;
+    }
+    .menu-toggle {
+      font-size: 24px;
+      background: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      z-index: 1001;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .sidebar a, .dropdown-btn {
+      padding: 14px 24px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+    }
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+    .dropdown-container {
+      display: none;
+      background-color: #2c5282;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 70px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #1e3a8a;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #1e3a8a;
+    }
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Geography - Chapter 6: Population</h1>
+
+    <h2>1. Introduction</h2>
+    <p>Population is a crucial component of social studies. It affects the resources, environment, and development of any country. India's population is diverse and dynamic.</p>
+
+    <h2>2. Census</h2>
+    <p>The census is the official count of population conducted every 10 years. It provides essential information like age, sex ratio, literacy rate, occupation, etc.</p>
+
+    <h2>3. Population Size and Distribution</h2>
+    <ul>
+      <li>India is the second most populous country after China.</li>
+      <li>As per the 2011 Census, India’s population was over 1.21 billion.</li>
+      <li>Population is unevenly distributed – states like Uttar Pradesh are densely populated while Sikkim is sparsely populated.</li>
+    </ul>
+
+    <h2>4. Population Growth</h2>
+    <ul>
+      <li>Population growth refers to the change in population over time.</li>
+      <li>Two types:
+        <ul>
+          <li><strong>Natural Growth:</strong> Difference between birth rate and death rate.</li>
+          <li><strong>Actual Growth:</strong> Natural growth plus immigration minus emigration.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>5. Population Density</h2>
+    <p>It is the number of people living per square kilometer. As of 2011, India’s density was 382 persons/sq. km. Bihar has the highest density, while Arunachal Pradesh has the lowest.</p>
+
+    <h2>6. Population Composition</h2>
+    <ul>
+      <li><strong>Age Composition:</strong> Children (below 15), working population (15–59), aged (60+).</li>
+      <li><strong>Sex Ratio:</strong> Number of females per 1000 males. India’s average is 940 (as per 2011).</li>
+      <li><strong>Literacy Rate:</strong> 74% overall; higher in males than females.</li>
+      <li><strong>Occupational Structure:</strong> Majority are engaged in primary sector like farming.</li>
+    </ul>
+
+    <h2>7. Adolescents in India</h2>
+    <p>Adolescents (age 10–19) form about 20% of the population. Their education, nutrition, and development are crucial for national progress.</p>
+
+    <h2>8. Health and National Population Policy</h2>
+    <ul>
+      <li>Health indicators include life expectancy, infant mortality, nutrition, etc.</li>
+      <li>National Population Policy 2000 aims to stabilize population, promote reproductive health, and improve health care infrastructure.</li>
+    </ul>
+
+    <h2>9. Conclusion</h2>
+    <p>Understanding population trends helps in planning and development. Balanced population growth is essential for sustainable development.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>

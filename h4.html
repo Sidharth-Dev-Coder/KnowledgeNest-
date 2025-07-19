@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ch 4 - Forest Society and Colonialism</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .top-bar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f8d;
+      padding-left: 15px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 4 – Forest Society and Colonialism</h1>
+
+    <h2>Introduction</h2>
+    <p>This chapter deals with the lives of forest dwellers and how their world changed under British colonial rule. Forests were seen as a source of revenue, timber, and power by the British.</p>
+
+    <h2>Role of Forests in Local Communities</h2>
+    <p>Forests provided food, fuel, medicines, and materials for housing. Tribal people relied on shifting cultivation and hunting. They had deep spiritual and cultural ties with forests.</p>
+
+    <h2>Colonial Control Over Forests</h2>
+    <ul>
+      <li>The British introduced forest laws that restricted access and use of forest resources.</li>
+      <li>Only certain forests were declared 'Reserved Forests'. Local communities were banned from traditional practices like hunting and grazing.</li>
+      <li>Shifting cultivation (jhum) was banned as it was seen as harmful to forests.</li>
+    </ul>
+
+    <h2>The Rise of Commercial Forestry</h2>
+    <p>
+      The British needed timber for shipbuilding and railway sleepers, leading to large-scale deforestation and commercial plantations.
+    </p>
+
+    <h2>Forest Acts and Their Impact</h2>
+    <ul>
+      <li>The Indian Forest Act of 1865 and its later amendments criminalized forest-based livelihoods.</li>
+      <li>Forest guards and officials harassed local communities.</li>
+      <li>People were fined and jailed for collecting wood or grazing animals.</li>
+    </ul>
+
+    <h2>Rebellions and Resistance</h2>
+    <ul>
+      <li>Many tribal communities rebelled against forest laws (e.g., Santhal, Baiga, and Bastar rebellions).</li>
+      <li>They demanded the right to use forests and protested exploitation by forest officials.</li>
+    </ul>
+
+    <h2>Forest Transformations in Other Countries</h2>
+    <p>
+      Similar changes occurred in Java (Indonesia), where the Dutch enforced strict control over forests. The Kalangs resisted but were suppressed.
+    </p>
+
+    <h2>Scientific Forestry</h2>
+    <p>
+      This was a new system where only selected trees were cut, and new plantations were planned. However, it destroyed biodiversity and local usage of forest products.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      Colonial forest policies disrupted traditional lifestyles and harmed both people and nature. Forest management today must balance development with ecological and tribal rights.
+    </p>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ch 3 - Nazism and the Rise of Hitler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .top-bar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f8d;
+      padding-left: 15px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="top-bar">
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 3 – Nazism and The Rise of Hitler</h1>
+
+    <h2>Introduction</h2>
+    <p>This chapter explains how Nazism emerged in Germany, the rise of Adolf Hitler, and how these changes affected the people of Germany and the world. It helps understand how dictatorship grew out of crisis.</p>
+
+    <h2>Birth of the Weimar Republic</h2>
+    <p>After Germany’s defeat in World War I, the Weimar Republic was established in 1919. It faced many problems including:
+      <ul>
+        <li>Harsh terms of the Treaty of Versailles</li>
+        <li>Economic crisis and inflation</li>
+        <li>Political instability and lack of public support</li>
+      </ul>
+    </p>
+
+    <h2>The Effects of the Great Depression</h2>
+    <p>In 1929, the global Great Depression hit Germany hard. Businesses collapsed, unemployment rose, and people became hopeless. This created the perfect environment for Hitler’s rise.</p>
+
+    <h2>Hitler's Rise to Power</h2>
+    <ul>
+      <li>Hitler joined the German Workers’ Party in 1919 and later renamed it the Nazi Party.</li>
+      <li>He promised to restore Germany’s glory, reduce unemployment, and punish those responsible for the country’s problems.</li>
+      <li>In 1933, Hitler was appointed Chancellor of Germany. He soon established a dictatorship.</li>
+    </ul>
+
+    <h2>The Nazi Worldview</h2>
+    <p>Nazis believed in:
+      <ul>
+        <li>Racial purity – Aryans were superior</li>
+        <li>Anti-Semitism – Jews were seen as enemies</li>
+        <li>Strong German state and military</li>
+        <li>Expansion of territory (lebensraum)</li>
+      </ul>
+    </p>
+
+    <h2>Establishment of the Nazi State</h2>
+    <p>After 1933, Hitler quickly eliminated democracy:
+      <ul>
+        <li>Banned other political parties</li>
+        <li>Controlled media, education, and police</li>
+        <li>Set up secret police (Gestapo)</li>
+      </ul>
+    </p>
+
+    <h2>Impact on Youth and Women</h2>
+    <p>
+      <strong>Youth:</strong> Hitler created youth organizations to brainwash children into Nazi ideology.<br>
+      <strong>Women:</strong> Expected to become homemakers and mothers. Career opportunities were limited.
+    </p>
+
+    <h2>Persecution of Jews</h2>
+    <p>
+      Jews faced severe discrimination, boycott of businesses, and social exclusion. In 1935, the Nuremberg Laws removed their citizenship and rights. During World War II, the Holocaust led to the killing of 6 million Jews in concentration camps.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      Nazism was a dangerous political ideology that caused immense suffering in Germany and the world. It teaches the importance of democracy, tolerance, and human rights.
+    </p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ch 2 - Socialism in Europe and the Russian Revolution</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      display: flex;
+      flex-direction: row-reverse; /* Swap toggle and title */
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .top-bar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f8d;
+      padding-left: 15px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #2563eb;
+      margin-top: 20px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <div class="top-bar">
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 2 – Socialism in Europe and the Russian Revolution</h1>
+
+    <h2>Introduction</h2>
+    <p>The Russian Revolution was one of the most significant political events of the 20th century. It marked the rise of communism and drastically changed the socio-political landscape of Russia and the world.</p>
+
+    <h2>The Age of Social Change</h2>
+    <p>In the 19th century, Europe saw many changes in social and political life. Industrialization led to the rise of new social classes. Liberals, Radicals, and Conservatives had different ideas of how society should be organized.</p>
+
+    <h2>Emergence of Socialism</h2>
+    <p>Socialism developed as a response to the inequalities of capitalism. Thinkers like Karl Marx and Friedrich Engels advocated for a classless society and believed that workers should own the means of production.</p>
+
+    <h2>The Russian Empire in 1914</h2>
+    <p>Russia was ruled by the Tsar and was an autocratic state. Most of the population were peasants living in poor conditions. The economy was mainly agricultural with limited industrial development.</p>
+
+    <h2>Events Leading to the Revolution</h2>
+    <ul>
+      <li>1905: Bloody Sunday massacre led to widespread protests.</li>
+      <li>1914: Russia entered World War I, worsening the economic crisis.</li>
+      <li>1917: February Revolution forced Tsar Nicholas II to abdicate.</li>
+    </ul>
+
+    <h2>The October Revolution</h2>
+    <p>The Bolsheviks, led by Vladimir Lenin, overthrew the Provisional Government in October 1917. They promised “Peace, Land, and Bread” to the people and began restructuring Russian society along socialist lines.</p>
+
+    <h2>Aftermath and Civil War</h2>
+    <p>Between 1918–1920, a civil war broke out between the Red Army (Bolsheviks) and the White Army (opponents of Bolsheviks). The Bolsheviks eventually won and established a communist government.</p>
+
+    <h2>Impact of the Revolution</h2>
+    <ul>
+      <li>End of monarchy and aristocracy in Russia</li>
+      <li>Beginning of communist rule under the Soviet Union</li>
+      <li>Inspired leftist movements globally</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>The Russian Revolution not only changed Russia but also inspired movements across the world. It challenged existing power structures and paved the way for future struggles for equality and justice.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 1 - The French Revolution | History | Class 9</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;}
+    body {background: #f9f9f9; color: #333;}
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      z-index: 1001;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a, .dropdown-btn {
+      display: block;
+      padding: 14px 24px;
+      color: white;
+      text-decoration: none;
+      background: none;
+      border: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #3b4cad;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #324295;
+    }
+
+    .main {
+      padding: 80px 20px 30px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {color: #1e3a8a; margin-bottom: 10px;}
+    h2 {color: #1e40af; margin-top: 30px; margin-bottom: 10px;}
+    p {margin-bottom: 10px; line-height: 1.6;}
+    ul {margin-left: 20px; margin-bottom: 15px;}
+    li {margin-bottom: 5px;}
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 1 – The French Revolution</h1>
+
+    <h2>Introduction</h2>
+    <p>The French Revolution began in 1789 and ended in the late 1790s. It marked the end of monarchy and paved the way for democracy and modern nation-states.</p>
+
+    <h2>Causes of the French Revolution</h2>
+    <ul>
+      <li><strong>Social Inequality:</strong> French society was divided into three estates. The First and Second Estates enjoyed privileges while the Third Estate bore the burden of taxes.</li>
+      <li><strong>Economic Crisis:</strong> France faced debt due to lavish spending and wars, especially the American War of Independence.</li>
+      <li><strong>Enlightenment Ideas:</strong> Philosophers like Rousseau and Voltaire inspired people with ideas of liberty and equality.</li>
+      <li><strong>Weak Monarchy:</strong> King Louis XVI was indecisive and could not handle the crisis effectively.</li>
+    </ul>
+
+    <h2>The Outbreak of the Revolution</h2>
+    <p>On 5th May 1789, Louis XVI called a meeting of the Estates-General. The Third Estate demanded a vote per person, which was denied. On 14th July 1789, the Bastille was stormed, symbolizing the start of the revolution.</p>
+
+    <h2>End of Monarchy</h2>
+    <ul>
+      <li>France became a constitutional monarchy in 1791.</li>
+      <li>In 1792, monarchy was abolished and France became a republic.</li>
+      <li>In 1793, Louis XVI was executed.</li>
+    </ul>
+
+    <h2>The Reign of Terror</h2>
+    <p>From 1793 to 1794, Robespierre ruled France with strict laws and severe punishments. Thousands were executed. Eventually, Robespierre was also executed and this period ended.</p>
+
+    <h2>The Rise of Napoleon</h2>
+    <p>In 1799, Napoleon Bonaparte took control through a coup. He introduced many reforms but later became Emperor. He was finally defeated at the Battle of Waterloo in 1815.</p>
+
+    <h2>Legacy of the French Revolution</h2>
+    <ul>
+      <li>Spread of ideas of liberty, equality, and fraternity.</li>
+      <li>Inspired revolutions across Europe and the world.</li>
+      <li>End of feudalism and emergence of democratic ideals.</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
