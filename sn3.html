@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3 - Atoms and Molecules | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+    a { color: black; text-decoration: none; }
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1001;
+    }
+    .menu-toggle {
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .brand-text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0; left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      overflow-y: auto;
+      z-index: 1000;
+    }
+    .sidebar.open { left: 0; }
+    .sidebar a, .dropdown-btn {
+      padding: 15px 20px;
+      display: block;
+      color: white;
+      border: none;
+      background: none;
+      text-align: left;
+      cursor: pointer;
+    }
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #3742fa;
+    }
+    .dropdown-container {
+      display: none;
+      background-color: #243576;
+    }
+    .dropdown-container a {
+      padding-left: 40px;
+    }
+    .main {
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+    h1, h2, h3 { color: #1e3a8a; }
+    section { margin-bottom: 30px; }
+    ul { margin-left: 20px; }
+    .logout-btn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: crimson;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 3: Atoms and Molecules</h1>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>This chapter explains the laws that govern chemical combinations and introduces the concept of atoms and molecules, how they combine, and how their quantities are represented in chemistry.</p>
+    </section>
+
+    <section>
+      <h2>Laws of Chemical Combination</h2>
+      <h3>1. Law of Conservation of Mass</h3>
+      <p>Mass can neither be created nor destroyed in a chemical reaction.</p>
+      <h3>2. Law of Constant Proportions</h3>
+      <p>A given compound always contains the same elements in the same proportion by mass.</p>
+    </section>
+
+    <section>
+      <h2>Atoms</h2>
+      <ul>
+        <li>Atoms are the smallest particles of an element that can take part in a chemical reaction.</li>
+        <li>They are indivisible by chemical means.</li>
+        <li>Each element has unique atoms (e.g., Hydrogen atom differs from Oxygen atom).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Dalton’s Atomic Theory</h2>
+      <ul>
+        <li>All matter is made of indivisible particles called atoms.</li>
+        <li>Atoms of a given element are identical in mass and properties.</li>
+        <li>Atoms combine in simple whole-number ratios to form compounds.</li>
+        <li>Atoms can neither be created nor destroyed in a chemical reaction.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Molecules</h2>
+      <p>Molecules are formed when two or more atoms combine chemically.</p>
+      <ul>
+        <li><strong>Molecule of element:</strong> O₂, H₂, N₂</li>
+        <li><strong>Molecule of compound:</strong> H₂O, CO₂</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Atomicity</h2>
+      <p>Number of atoms present in a molecule of an element.</p>
+      <ul>
+        <li>Monoatomic: He, Ne</li>
+        <li>Diatomic: O₂, H₂</li>
+        <li>Polyatomic: O₃, P₄</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ions</h2>
+      <ul>
+        <li>Charged particles (cation - positive, anion - negative).</li>
+        <li>Formed by gaining or losing electrons.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Chemical Formula</h2>
+      <p>Represents the composition of molecules in terms of atoms.</p>
+      <ul>
+        <li><strong>H₂O</strong>: 2 atoms of hydrogen, 1 atom of oxygen</li>
+        <li><strong>NaCl</strong>: 1 sodium ion, 1 chloride ion</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mole Concept</h2>
+      <ul>
+        <li>1 mole = 6.022 × 10²³ particles (Avogadro number)</li>
+        <li>Molar mass: mass of 1 mole of a substance</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Summary</h2>
+      <ul>
+        <li>Atoms and molecules are fundamental building blocks of matter.</li>
+        <li>Mass is conserved in a reaction.</li>
+        <li>Chemical reactions involve rearrangement of atoms.</li>
+        <li>Compounds are formed in fixed ratios by mass.</li>
+        <li>The mole helps in quantifying chemical substances.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

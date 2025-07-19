@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 9 Science - Chapter 5 | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .top-bar {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1003;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .menu-toggle {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+      }
+      .brand-text {
+        margin-left: auto;
+        margin-right: 20px;
+      }
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #575757;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #444;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1, h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <section>
+      <h1>Chapter 5: The Fundamental Unit of Life</h1>
+
+      <h2>Introduction</h2>
+      <p>This chapter introduces the basic unit of life – the cell – and explains its structure and function in both plant and animal organisms.</p>
+
+      <h2>Discovery of the Cell</h2>
+      <ul>
+        <li>Robert Hooke discovered cells in 1665 while observing a cork slice under a microscope.</li>
+        <li>Anton van Leeuwenhoek observed living cells.</li>
+      </ul>
+
+      <h2>Cell Theory</h2>
+      <ul>
+        <li>Proposed by Schleiden and Schwann.</li>
+        <li>All living organisms are made of cells.</li>
+        <li>Cell is the basic structural and functional unit of life.</li>
+        <li>Rudolf Virchow added: All cells arise from pre-existing cells.</li>
+      </ul>
+
+      <h2>Types of Organisms</h2>
+      <ul>
+        <li><strong>Unicellular:</strong> Made of one cell (e.g., Amoeba).</li>
+        <li><strong>Multicellular:</strong> Made of many cells (e.g., humans).</li>
+      </ul>
+
+      <h2>Cell Structure</h2>
+      <ul>
+        <li><strong>Plasma Membrane:</strong> Semi-permeable membrane controlling entry and exit of substances.</li>
+        <li><strong>Cell Wall:</strong> Found only in plant cells; provides protection and shape.</li>
+        <li><strong>Cytoplasm:</strong> Jelly-like fluid where all organelles are suspended.</li>
+        <li><strong>Nucleus:</strong> Control center of the cell. Contains genetic material (DNA).</li>
+      </ul>
+
+      <h2>Cell Organelles</h2>
+      <ul>
+        <li><strong>Endoplasmic Reticulum (ER):</strong> Rough ER (with ribosomes) helps in protein synthesis; Smooth ER helps in lipid synthesis.</li>
+        <li><strong>Golgi Apparatus:</strong> Packaging and transport of proteins.</li>
+        <li><strong>Lysosomes:</strong> Contains digestive enzymes; known as the “suicide bag”.</li>
+        <li><strong>Mitochondria:</strong> Powerhouse of the cell; generates ATP.</li>
+        <li><strong>Plastids:</strong> Found in plant cells; includes chloroplasts for photosynthesis.</li>
+        <li><strong>Vacuoles:</strong> Storage sacs for water and nutrients; large in plant cells.</li>
+      </ul>
+
+      <h2>Difference between Plant and Animal Cells</h2>
+      <ul>
+        <li>Plant cells have a cell wall and chloroplasts; animal cells do not.</li>
+        <li>Plant cells have large vacuoles; animal cells have small or no vacuoles.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>The cell is the structural and functional unit of life. Understanding cell structure and organelles is key to studying biology and life processes.</p>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
