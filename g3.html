@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geography - Chapter 3 | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      z-index: 1002;
+    }
+    .menu-toggle {
+      font-size: 24px;
+      background: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      z-index: 1001;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .sidebar a, .dropdown-btn {
+      padding: 14px 24px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+    }
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374ea2;
+    }
+    .dropdown-container {
+      display: none;
+      background-color: #2c5282;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 70px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 15px;
+      color: #1e3a8a;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #1e3a8a;
+    }
+    p, li {
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Geography - Chapter 3: Drainage</h1>
+
+    <h2>1. What is Drainage?</h2>
+    <p>Drainage refers to the river system of an area. A drainage basin is the area drained by a single river system.</p>
+
+    <h2>2. Major Drainage Systems in India</h2>
+    <ul>
+      <li><strong>Himalayan Rivers:</strong> Perennial (fed by snow and rain). E.g. Ganga, Indus, Brahmaputra.</li>
+      <li><strong>Peninsular Rivers:</strong> Seasonal (dependent on rainfall). E.g. Godavari, Krishna, Mahanadi.</li>
+    </ul>
+
+    <h2>3. The Himalayan River Systems</h2>
+    <ul>
+      <li><strong>Indus:</strong> Originates in Tibet, flows through Ladakh and Pakistan.</li>
+      <li><strong>Ganga:</strong> Originates at Gangotri glacier, joined by Yamuna, Son, Gandak.</li>
+      <li><strong>Brahmaputra:</strong> Known as Tsangpo in Tibet, enters Arunachal Pradesh as Dihang.</li>
+    </ul>
+
+    <h2>4. Peninsular Rivers</h2>
+    <ul>
+      <li><strong>Godavari:</strong> Longest Peninsular river, called Dakshin Ganga.</li>
+      <li><strong>Other major rivers:</strong> Mahanadi, Krishna, Kaveri (east-flowing).</li>
+      <li><strong>West-flowing rivers:</strong> Narmada and Tapi flow into Arabian Sea.</li>
+    </ul>
+
+    <h2>5. Lakes</h2>
+    <ul>
+      <li><strong>Natural Lakes:</strong> Wular, Dal, Bhimtal, Nainital.</li>
+      <li><strong>Artificial Lakes:</strong> Created by dams, e.g. Govind Sagar (on Sutlej).</li>
+    </ul>
+
+    <h2>6. Importance of Rivers</h2>
+    <p>Rivers are crucial for irrigation, drinking water, industries, hydroelectricity, and transportation.</p>
+
+    <h2>7. River Pollution</h2>
+    <p>Domestic and industrial waste is polluting rivers. The Ganga and Yamuna are severely affected.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
