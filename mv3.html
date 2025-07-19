@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maths Videos | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .top-bar .brand {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #1e3a8a;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      transition: 0.3s;
+      z-index: 1000;
+      padding-top: 60px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a, .dropdown-btn {
+      display: block;
+      padding: 15px 20px;
+      border: none;
+      background: none;
+      color: white;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background: #3b4fbb;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #243b9e;
+      padding-left: 15px;
+    }
+
+    .main {
+      margin-top: 70px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media(min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    .video-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 10px;
+      transition: transform 0.2s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 180px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .video-card h3 {
+      font-size: 16px;
+      margin: 10px 0 0;
+      color: #1e3a8a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+    <div class="brand"><i class="fas fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2>Maths Chapter-3 Video Lectures</h2>
+    <div class="video-section">
+      <div class="video-card">
+        <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/t8lcvw131T0?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+        <h3>Ch 3: Animated Coordinate Geometry</h3>
+      </div>
+      <div class="video-card">
+        <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/3MIZUl6bWxY?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;"></iframe></div>
+        <h3>Ch 3: Coordinate Geometry</h3>
+      </div>
+      
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdownContent = this.nextElementSibling;
+        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
