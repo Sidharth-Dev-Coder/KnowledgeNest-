@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 4 - Linear Equations in Two Variables | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9; color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      order: 2;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      color: white;
+      border: none;
+      order: 1;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #2c4cb2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f99;
+      padding-left: 20px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-top: 60px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #2563eb;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .note-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="note-card">
+      <h1>Chapter 4: Linear Equations in Two Variables</h1>
+
+      <h2>Introduction</h2>
+      <p>This chapter deals with equations of the form <strong>ax + by + c = 0</strong>, where a, b, and c are real numbers and a and b are not both zero.</p>
+
+      <h2>1. Linear Equation</h2>
+      <p>A linear equation in two variables is an equation which can be written in the form:</p>
+      <p><strong>ax + by + c = 0</strong></p>
+      <p>Examples: 2x + 3y = 6, x – y = 4</p>
+
+      <h2>2. Solutions of Linear Equations</h2>
+      <ul>
+        <li>A solution is a pair of values (x, y) that satisfies the equation.</li>
+        <li>There are infinitely many solutions to a linear equation in two variables.</li>
+        <li>Example: x + y = 5 ⇒ (2, 3), (1, 4), (0, 5) all are solutions.</li>
+      </ul>
+
+      <h2>3. Graph of a Linear Equation</h2>
+      <ul>
+        <li>The graph of a linear equation in two variables is a straight line.</li>
+        <li>To draw the graph, plot at least two solutions and join them with a straight line.</li>
+        <li>Example: For x + y = 5, use (0,5), (5,0), (2,3)</li>
+      </ul>
+
+      <h2>4. Important Notes</h2>
+      <ul>
+        <li>Every point on the line is a solution of the equation.</li>
+        <li>If a point does not lie on the line, it is not a solution.</li>
+        <li>If we fix the value of x, we get a unique value of y, and vice versa.</li>
+      </ul>
+
+      <h2>5. Applications</h2>
+      <ul>
+        <li>Used in solving real-life problems where two quantities vary linearly.</li>
+        <li>Example: Cost of items, time-distance problems, etc.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Linear equations in two variables provide a strong foundation for algebra and coordinate geometry. Understanding how to interpret and graph them is essential for solving problems effectively.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

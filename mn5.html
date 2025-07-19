@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 5 - Euclid’s Geometry | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9; color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      order: 2;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      color: white;
+      border: none;
+      order: 1;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #2c4cb2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f99;
+      padding-left: 20px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-top: 60px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #2563eb;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .note-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="note-card">
+      <h1>Chapter 5: Introduction to Euclid’s Geometry</h1>
+
+      <h2>1. What is Geometry?</h2>
+      <p>Geometry is the branch of mathematics that deals with shapes, sizes, and the properties of space and figures.</p>
+
+      <h2>2. Euclid and His Work</h2>
+      <ul>
+        <li>Euclid was a Greek mathematician, known as the "Father of Geometry".</li>
+        <li>He wrote a book called *Elements* containing 13 volumes on geometry and number theory.</li>
+        <li>He introduced the idea of axioms and postulates.</li>
+      </ul>
+
+      <h2>3. Euclid’s Definitions</h2>
+      <p>He defined many terms such as:</p>
+      <ul>
+        <li>Point: That which has no part</li>
+        <li>Line: A breadthless length</li>
+        <li>Surface: That which has length and breadth only</li>
+      </ul>
+
+      <h2>4. Axioms and Postulates</h2>
+      <p><strong>Axioms:</strong> Statements accepted without proof, applicable universally.</p>
+      <p><strong>Postulates:</strong> Assumptions specific to geometry.</p>
+
+      <h2>Euclid’s Five Postulates</h2>
+      <ol>
+        <li>A straight line can be drawn from any one point to another.</li>
+        <li>A terminated line can be extended indefinitely.</li>
+        <li>A circle can be drawn with any center and radius.</li>
+        <li>All right angles are equal to one another.</li>
+        <li>If a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two lines, if produced indefinitely, meet on that side.</li>
+      </ol>
+
+      <h2>5. Equivalent Versions in Modern Geometry</h2>
+      <p>Modern mathematics accepts Euclid’s postulates as the basis of Euclidean geometry, but uses improved definitions for accuracy and clarity.</p>
+
+      <h2>6. Importance</h2>
+      <ul>
+        <li>Laid the foundation for classical geometry.</li>
+        <li>Helps in logical reasoning and problem solving.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Euclid's geometry introduced the systematic study of mathematics using logical steps. Understanding his postulates helps in grasping modern geometry better.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

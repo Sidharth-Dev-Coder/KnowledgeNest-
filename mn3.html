@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 3 - Coordinate Geometry | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9; color: #333;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      order: 2;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      color: white;
+      border: none;
+      order: 1;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #2c4cb2;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f99;
+      padding-left: 20px;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .main {
+      margin-top: 60px;
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 250px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #2563eb;
+    }
+
+    p, li {
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .note-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="note-card">
+      <h1>Chapter 3: Coordinate Geometry</h1>
+      <p><strong>Topics Covered:</strong></p>
+      <ul>
+        <li>Introduction to Coordinate Plane</li>
+        <li>Cartesian System</li>
+        <li>Plotting Points</li>
+        <li>Quadrants</li>
+      </ul>
+
+      <h2>1. Introduction to Coordinate Geometry</h2>
+      <p>Coordinate geometry is the branch of mathematics in which geometric problems are solved using coordinate systems and algebraic techniques.</p>
+
+      <h2>2. Cartesian System</h2>
+      <p>The Cartesian system consists of two perpendicular lines:</p>
+      <ul>
+        <li><strong>x-axis:</strong> The horizontal line</li>
+        <li><strong>y-axis:</strong> The vertical line</li>
+      </ul>
+      <p>The point where these two axes intersect is called the <strong>origin</strong> (0, 0).</p>
+
+      <h2>3. Coordinates of a Point</h2>
+      <p>Coordinates are written as an ordered pair (x, y) where:</p>
+      <ul>
+        <li><strong>x:</strong> Distance from the y-axis (horizontal distance)</li>
+        <li><strong>y:</strong> Distance from the x-axis (vertical distance)</li>
+      </ul>
+
+      <h2>4. Quadrants</h2>
+      <p>The x- and y-axes divide the plane into four regions called quadrants:</p>
+      <ul>
+        <li><strong>Quadrant I:</strong> (+x, +y)</li>
+        <li><strong>Quadrant II:</strong> (−x, +y)</li>
+        <li><strong>Quadrant III:</strong> (−x, −y)</li>
+        <li><strong>Quadrant IV:</strong> (+x, −y)</li>
+      </ul>
+
+      <h2>5. Plotting Points</h2>
+      <p>To plot a point, start from the origin:</p>
+      <ul>
+        <li>Move right/left for x</li>
+        <li>Move up/down for y</li>
+      </ul>
+      <p>Example: To plot (3, 2), move 3 units right and 2 units up.</p>
+
+      <h2>Conclusion</h2>
+      <p>Coordinate geometry helps us represent and solve geometric problems in a two-dimensional space. Understanding how to read and plot points is the first step.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

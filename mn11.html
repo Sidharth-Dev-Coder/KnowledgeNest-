@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 11: Surface Areas and Volumes - KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: left 0.3s;
+      z-index: 999;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a, .dropdown-btn {
+      display: block;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: white;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #3746a0;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3d75;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media(min-width: 768px) {
+      .sidebar { left: 0; }
+      .main-content { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #3746a0;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Chapter 11: Surface Areas and Volumes</h1>
+
+    <h2>Introduction</h2>
+    <p>
+      In this chapter, we study the surface areas and volumes of solid shapes such as cubes, cuboids, cylinders, cones, spheres, and hemispheres.
+    </p>
+
+    <h2>Basic Concepts</h2>
+    <ul>
+      <li><strong>Surface Area</strong>: Total area of all the faces (outer surface) of a 3D object.</li>
+      <li><strong>Volume</strong>: Space occupied by a 3D object.</li>
+    </ul>
+
+    <h2>Formulas for Surface Area and Volume</h2>
+
+    <h3>1. Cuboid</h3>
+    <ul>
+      <li>Surface Area = <code>2(lb + bh + hl)</code></li>
+      <li>Volume = <code>l × b × h</code></li>
+    </ul>
+
+    <h3>2. Cube</h3>
+    <ul>
+      <li>Surface Area = <code>6a²</code></li>
+      <li>Volume = <code>a³</code></li>
+    </ul>
+
+    <h3>3. Cylinder</h3>
+    <ul>
+      <li>Curved Surface Area = <code>2πrh</code></li>
+      <li>Total Surface Area = <code>2πr(h + r)</code></li>
+      <li>Volume = <code>πr²h</code></li>
+    </ul>
+
+    <h3>4. Cone</h3>
+    <ul>
+      <li>Curved Surface Area = <code>πrl</code></li>
+      <li>Total Surface Area = <code>πr(l + r)</code></li>
+      <li>Volume = <code>(1/3)πr²h</code></li>
+    </ul>
+
+    <h3>5. Sphere</h3>
+    <ul>
+      <li>Surface Area = <code>4πr²</code></li>
+      <li>Volume = <code>(4/3)πr³</code></li>
+    </ul>
+
+    <h3>6. Hemisphere</h3>
+    <ul>
+      <li>Curved Surface Area = <code>2πr²</code></li>
+      <li>Total Surface Area = <code>3πr²</code></li>
+      <li>Volume = <code>(2/3)πr³</code></li>
+    </ul>
+
+    <h2>Applications</h2>
+    <ul>
+      <li>Finding cost of painting or wrapping objects (uses surface area).</li>
+      <li>Finding capacity or storage space (uses volume).</li>
+    </ul>
+
+    <h2>Conversion of Solids</h2>
+    <p>
+      Sometimes one shape is melted and recast into another. In such cases:
+    </p>
+    <p><strong>Volume remains constant</strong></p>
+    <p><code>Volume of original solid = Volume of new solid</code></p>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>Learn and memorize all formulas.</li>
+      <li>Surface area deals with outer surface; volume deals with inner capacity.</li>
+      <li>Always use correct units: cm² for area, cm³ for volume.</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 7: Triangles - KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: left 0.3s;
+      z-index: 999;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a, .dropdown-btn {
+      display: block;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: white;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #3746a0;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3d75;
+    }
+
+    .main-content {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media(min-width: 768px) {
+      .sidebar { left: 0; }
+      .main-content { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #3746a0;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin-left: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="logo"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Chapter 7: Triangles</h1>
+
+    <h2>Introduction</h2>
+    <p>This chapter introduces the concept of triangles, their properties, rules of congruence, and theorems related to triangles.</p>
+
+    <h2>Triangles</h2>
+    <p>A triangle is a closed figure formed by three line segments. It has three sides, three angles, and three vertices.</p>
+
+    <h2>Types of Triangles</h2>
+    <ul>
+      <li><strong>Based on Sides:</strong>
+        <ul>
+          <li>Scalene: All sides unequal</li>
+          <li>Isosceles: Two sides equal</li>
+          <li>Equilateral: All sides equal</li>
+        </ul>
+      </li>
+      <li><strong>Based on Angles:</strong>
+        <ul>
+          <li>Acute-angled: All angles less than 90°</li>
+          <li>Right-angled: One angle exactly 90°</li>
+          <li>Obtuse-angled: One angle more than 90°</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>Congruence of Triangles</h2>
+    <p>Two triangles are congruent if all their corresponding sides and angles are equal.</p>
+
+    <h2>Congruence Criteria</h2>
+    <ul>
+      <li>SAS (Side-Angle-Side)</li>
+      <li>ASA (Angle-Side-Angle)</li>
+      <li>SSS (Side-Side-Side)</li>
+      <li>RHS (Right angle-Hypotenuse-Side)</li>
+    </ul>
+
+    <h2>Properties of Triangle</h2>
+    <ul>
+      <li>Angles opposite to equal sides are equal.</li>
+      <li>Sides opposite to equal angles are equal.</li>
+    </ul>
+
+    <h2>Triangle Inequality Theorem</h2>
+    <p>The sum of the lengths of any two sides of a triangle is always greater than the length of the third side.</p>
+
+    <h2>Angle Sum Property</h2>
+    <p>The sum of the interior angles of a triangle is always 180°.</p>
+
+    <h2>Summary</h2>
+    <p>This chapter helps build understanding of triangles, their types, congruence criteria, and important properties which are useful in further geometry.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
