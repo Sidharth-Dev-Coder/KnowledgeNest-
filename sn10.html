@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 9 Science - Chapter 10 | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1003;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .menu-toggle { position: fixed; top: 15px; left: 15px; }
+      .brand-text { margin-left: auto; margin-right: 20px; }
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #575757;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #444;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1, h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    p { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <section>
+      <h1>Chapter 10: Gravitation</h1>
+
+      <h2>Introduction</h2>
+      <p>Gravitation is a natural phenomenon by which all things with mass or energy are brought toward one another. It is a fundamental force responsible for the motion of planets, stars, galaxies, and even light.</p>
+
+      <h2>Universal Law of Gravitation</h2>
+      <p>Every object in the universe attracts every other object with a force called gravitational force.</p>
+      <p><strong>Formula:</strong>  
+      F = G × (m₁ × m₂) / r²</p>
+      <ul>
+        <li>F = Gravitational force</li>
+        <li>G = Universal gravitational constant = 6.674 × 10⁻¹¹ N·m²/kg²</li>
+        <li>m₁ and m₂ = masses of two objects</li>
+        <li>r = distance between their centers</li>
+      </ul>
+
+      <h2>Importance of Universal Law</h2>
+      <ul>
+        <li>Explains the motion of planets and satellites</li>
+        <li>Responsible for tides due to the moon</li>
+        <li>Holds the solar system together</li>
+      </ul>
+
+      <h2>Free Fall</h2>
+      <p>When an object falls under the influence of gravitational force alone, it is said to be in free fall.</p>
+
+      <h2>Acceleration Due to Gravity (g)</h2>
+      <p>g = 9.8 m/s² on the surface of Earth.</p>
+      <p><strong>g = G × (M / R²)</strong>, where M is Earth's mass and R its radius.</p>
+
+      <h2>Mass vs Weight</h2>
+      <ul>
+        <li><strong>Mass:</strong> The quantity of matter. Constant everywhere. Unit: kg</li>
+        <li><strong>Weight:</strong> The force with which the object is attracted towards the Earth.  
+        W = m × g</li>
+      </ul>
+
+      <h2>Thrust and Pressure</h2>
+      <ul>
+        <li><strong>Thrust:</strong> Force acting perpendicular to a surface</li>
+        <li><strong>Pressure:</strong> Pressure = Thrust / Area</li>
+        <li>SI unit: Pascal (Pa)</li>
+      </ul>
+
+      <h2>Buoyancy</h2>
+      <p>When an object is immersed in a fluid, an upward force called buoyant force acts on it.</p>
+
+      <h2>Archimedes’ Principle</h2>
+      <p>When a body is partially or fully immersed in a fluid, it experiences an upward force equal to the weight of the displaced fluid.</p>
+
+      <h2>Relative Density</h2>
+      <p>Relative Density = Density of a substance / Density of water</p>
+      <p>It has no unit.</p>
+
+      <h2>Conclusion</h2>
+      <p>Gravitation governs the movement of celestial and terrestrial bodies. Its understanding helps us in scientific, astronomical, and daily applications like launching satellites, ship design, and measuring liquids.</p>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

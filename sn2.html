@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 2 – Is Matter Around Us Pure | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background-color: #1e3a8a; color: white;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 20px; z-index: 1002;
+    }
+
+    .top-bar .menu-toggle { font-size: 24px; cursor: pointer; background: none; border: none; color: white; }
+    .top-bar .brand-text { font-size: 22px; font-weight: bold; }
+
+    .sidebar {
+      position: fixed; top: 0; left: -250px; height: 100%;
+      width: 250px; background: #1e3a8a; color: white;
+      overflow-x: hidden; transition: 0.3s; padding-top: 60px; z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+    .sidebar a, .sidebar button.dropdown-btn {
+      padding: 14px 24px; text-decoration: none; color: white; display: block;
+      background: none; border: none; text-align: left; width: 100%; cursor: pointer;
+    }
+
+    .sidebar a:hover, .sidebar button:hover { background-color: #304ea1; }
+    .dropdown-container { display: none; background-color: #2a4180; padding-left: 15px; }
+
+    .main {
+      margin-top: 60px; padding: 20px; transition: margin-left 0.3s;
+    }
+
+    @media(min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 { font-size: 28px; margin-bottom: 10px; color: #1e3a8a; }
+    h2 { color: #333; margin-top: 20px; }
+    p, li { font-size: 16px; line-height: 1.6; margin: 10px 0; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fas fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>Chapter 2 – Is Matter Around Us Pure</h1>
+
+    <h2>Pure Substances</h2>
+    <p>A pure substance consists of a single type of particle. It cannot be separated into other substances by physical means.</p>
+
+    <h2>Mixtures</h2>
+    <p>A mixture contains two or more substances (elements or compounds) mixed together in any ratio. They are not chemically combined.</p>
+
+    <ul>
+      <li><strong>Homogeneous mixture</strong>: Uniform composition throughout (e.g., salt in water).</li>
+      <li><strong>Heterogeneous mixture</strong>: Non-uniform composition (e.g., sand in water).</li>
+    </ul>
+
+    <h2>Solutions</h2>
+    <p>A homogeneous mixture of two or more substances.</p>
+    <ul>
+      <li><strong>Solute</strong>: The substance dissolved.</li>
+      <li><strong>Solvent</strong>: The substance in which solute is dissolved.</li>
+    </ul>
+    <p><strong>Properties:</strong> Stable, clear, cannot be separated by filtration.</p>
+
+    <h2>Types of Solutions</h2>
+    <ul>
+      <li><strong>Solid in liquid</strong> – Sugar in water</li>
+      <li><strong>Gas in liquid</strong> – Oxygen in water</li>
+      <li><strong>Liquid in liquid</strong> – Alcohol in water</li>
+    </ul>
+
+    <h2>Suspensions</h2>
+    <p>A heterogeneous mixture in which particles are large enough to settle or be filtered out.</p>
+    <ul>
+      <li>Can be seen with naked eye</li>
+      <li>Unstable and can be separated by filtration</li>
+    </ul>
+
+    <h2>Colloids</h2>
+    <p>A mixture with intermediate particle size, appearing homogeneous but actually heterogeneous.</p>
+    <ul>
+      <li>Particles do not settle</li>
+      <li>Show Tyndall effect</li>
+      <li>Cannot be separated by filtration</li>
+    </ul>
+
+    <h2>Separation of Mixtures</h2>
+    <ul>
+      <li><strong>Evaporation</strong>: Separates a soluble solid from liquid (e.g., salt from water)</li>
+      <li><strong>Filtration</strong>: For insoluble solids in liquids</li>
+      <li><strong>Distillation</strong>: For separating miscible liquids with different boiling points</li>
+      <li><strong>Centrifugation</strong>: Separates suspended particles in liquids</li>
+      <li><strong>Chromatography</strong>: Separates colors or components in ink</li>
+    </ul>
+
+    <h2>Physical and Chemical Changes</h2>
+    <ul>
+      <li><strong>Physical change</strong>: No new substance formed, reversible (e.g., melting of ice)</li>
+      <li><strong>Chemical change</strong>: New substance formed, irreversible (e.g., burning of paper)</li>
+    </ul>
+
+    <h2>Elements, Compounds and Mixtures</h2>
+    <ul>
+      <li><strong>Element</strong>: Made of same kind of atoms (e.g., Hydrogen)</li>
+      <li><strong>Compound</strong>: Two or more elements chemically combined (e.g., H₂O)</li>
+      <li><strong>Mixture</strong>: Two or more substances mixed physically (e.g., air)</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>This chapter helps us understand how substances around us are either pure or mixtures, and how we can separate mixtures using physical methods.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
