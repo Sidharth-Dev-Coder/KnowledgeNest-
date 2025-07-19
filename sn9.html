@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 9 Science - Chapter 9 | KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      z-index: 1003;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      .menu-toggle { position: fixed; top: 15px; left: 15px; }
+      .brand-text { margin-left: auto; margin-right: 20px; }
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #575757;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #444;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1, h2 {
+      color: #1e3a8a;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    p { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <section>
+      <h1>Chapter 9: Force and Laws of Motion</h1>
+
+      <h2>Introduction</h2>
+      <p>Force is a push or pull that changes or tends to change the state of an object. Motion can be described through Newton’s three laws.</p>
+
+      <h2>Balanced and Unbalanced Forces</h2>
+      <ul>
+        <li><strong>Balanced Forces:</strong> Do not change the state of motion. Net force is zero.</li>
+        <li><strong>Unbalanced Forces:</strong> Change the state of motion. Net force is non-zero.</li>
+      </ul>
+
+      <h2>Newton's First Law of Motion</h2>
+      <p>An object continues to remain at rest or in uniform motion unless acted upon by an external force.</p>
+      <p>This law defines inertia — the tendency of objects to resist change in their state of motion.</p>
+
+      <h2>Inertia and Mass</h2>
+      <p>More the mass, more the inertia. Inertia is of three types:</p>
+      <ul>
+        <li>Inertia of rest</li>
+        <li>Inertia of motion</li>
+        <li>Inertia of direction</li>
+      </ul>
+
+      <h2>Newton's Second Law of Motion</h2>
+      <p>The rate of change of momentum is directly proportional to the applied force.</p>
+      <p><strong>F = ma</strong> (Force = mass × acceleration)</p>
+      <p>This law explains how force affects motion quantitatively.</p>
+
+      <h2>Momentum</h2>
+      <p>Momentum (p) = mass × velocity. SI unit is kg·m/s.</p>
+      <p>It is a vector quantity and plays a key role in dynamics.</p>
+
+      <h2>Newton's Third Law of Motion</h2>
+      <p>To every action, there is an equal and opposite reaction.</p>
+      <p>This is observed in actions like walking, rowing, firing a gun etc.</p>
+
+      <h2>Conservation of Momentum</h2>
+      <p>Total momentum of an isolated system remains constant if no external force acts on it.</p>
+      <p>Mathematically: <strong>m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂</strong></p>
+
+      <h2>Applications</h2>
+      <ul>
+        <li>Rocket propulsion</li>
+        <li>Collisions and rebounds</li>
+        <li>Jumping from a boat</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Newton’s laws provide the foundation for classical mechanics and help explain all types of motion in everyday life.</p>
+    </section>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>
