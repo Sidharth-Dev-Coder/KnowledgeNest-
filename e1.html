@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 9 Economics - Chapter 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+    }
+    .top-bar {
+      background: #1e3a8a;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .menu-toggle {
+      font-size: 24px;
+      color: white;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .top-bar .left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      background-color: #1e3a8a;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .sidebar a, .dropdown-btn {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      background: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+    }
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374bb4;
+    }
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f94;
+      padding-left: 20px;
+    }
+    .main {
+      margin-top: 70px;
+      padding: 20px;
+      margin-left: 0;
+      transition: margin-left 0.3s ease;
+    }
+    @media (min-width: 768px) {
+      .sidebar {
+        left: 0;
+      }
+      .main {
+        margin-left: 250px;
+      }
+      .menu-toggle {
+        display: none;
+      }
+    }
+    h1 {
+      margin-bottom: 15px;
+      font-size: 26px;
+      color: #1e3a8a;
+    }
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="left">
+    <button class="menu-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+</div>
+
+<div class="sidebar" id="mySidebar">
+  <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+</div>
+
+<div class="main">
+  <h1>Chapter 1: The Story of Village Palampur</h1>
+
+  <h2>Introduction</h2>
+  <p>This chapter introduces the fundamental concepts of production through a hypothetical village called Palampur. It explains how various resources are used to produce goods and services.</p>
+
+  <h2>1. Overview of Palampur</h2>
+  <p>Palampur is a well-connected village with roads, electricity, schools, and healthcare centers. The main occupation is farming.</p>
+
+  <h2>2. Organization of Production</h2>
+  <p>Production involves four essential requirements:</p>
+  <ul>
+    <li>Land – natural resource</li>
+    <li>Labour – people who work</li>
+    <li>Physical Capital – tools, machines, buildings</li>
+    <li>Human Capital – knowledge and enterprise</li>
+  </ul>
+
+  <h2>3. Farming in Palampur</h2>
+  <p>Land is fixed in the village, so increasing production requires using modern farming methods. HYV seeds, fertilizers, and irrigation helped increase yield.</p>
+  <p>But overuse of resources like groundwater leads to environmental concerns.</p>
+
+  <h2>4. Non-Farm Activities</h2>
+  <p>Apart from farming, people also engage in:</p>
+  <ul>
+    <li>Dairy farming</li>
+    <li>Small scale manufacturing</li>
+    <li>Shopkeeping</li>
+    <li>Transportation (e.g. rickshaw pullers, truck drivers)</li>
+  </ul>
+
+  <h2>5. Conclusion</h2>
+  <p>Through Palampur, we understand the basic economic activities in a rural setting, factors of production, and the role of technology in increasing output.</p>
+</div>
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("mySidebar").classList.toggle("open");
+  }
+
+  const dropdowns = document.querySelectorAll(".dropdown-btn");
+  dropdowns.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>

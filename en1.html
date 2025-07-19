@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Class 9 English Grammar - KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      z-index: 1002;
+    }
+
+    .top-bar .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0; left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+      overflow-y: auto;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 15px 20px;
+      display: block;
+      color: white;
+      text-decoration: none;
+      border: none;
+      background: none;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #3748ac;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2c419c;
+      padding-left: 20px;
+    }
+
+    .main {
+      margin-left: 0;
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h2 { margin-bottom: 10px; color: #1e3a8a; }
+    h3 { margin-top: 20px; color: #1e3a8a; }
+    p, li { margin-bottom: 10px; line-height: 1.6; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2>Class 9 English Integrated Grammar Notes</h2>
+
+    <h3>1. Tenses</h3>
+    <p>Tenses show the time of action. There are 3 main tenses:</p>
+    <ul>
+      <li><strong>Present</strong>: I write.</li>
+      <li><strong>Past</strong>: I wrote.</li>
+      <li><strong>Future</strong>: I will write.</li>
+    </ul>
+
+    <h3>2. Modals</h3>
+    <p>Modals are helping verbs (can, could, may, might, must, shall, should, will, would) used to express ability, possibility, permission, or obligation.</p>
+    <p><strong>Examples:</strong> You <em>should</em> study hard. He <em>might</em> come today.</p>
+
+    <h3>3. Subject-Verb Concord</h3>
+    <p>The verb must agree with the subject in number and person.</p>
+    <p><strong>Examples:</strong> She <em>runs</em> fast. They <em>run</em> fast.</p>
+
+    <h3>4. Reported Speech</h3>
+    <p>It is used to report what someone said.</p>
+    <p><strong>Example:</strong> Direct: He said, "I am happy." <br> Indirect: He said that he was happy.</p>
+
+    <h3>5. Determiners</h3>
+    <p>Words placed before nouns to clarify them. (a, an, the, this, those, some, many)</p>
+    <p><strong>Examples:</strong> <em>Some</em> people are missing. <em>The</em> sun is hot.</p>
+
+    <h3>6. Prepositions</h3>
+    <p>They show the relationship of a noun/pronoun with another word.</p>
+    <p><strong>Examples:</strong> The book is <em>on</em> the table. He lives <em>in</em> Delhi.</p>
+
+    <h3>7. Articles</h3>
+    <p>‘A’ and ‘An’ are indefinite, and ‘The’ is a definite article.</p>
+    <p><strong>Examples:</strong> I saw <em>a</em> dog. <em>The</em> moon is bright.</p>
+
+    <h3>8. Active and Passive Voice</h3>
+    <p>Active: Subject performs the action. <br> Passive: Subject receives the action.</p>
+    <p><strong>Example:</strong> Active: She wrote a letter. <br> Passive: A letter was written by her.</p>
+
+    <h3>9. Clauses</h3>
+    <p>A clause is a group of words with a subject and verb.</p>
+    <p><strong>Example:</strong> I know <em>that he is right</em>.</p>
+
+    <h3>10. Editing and Omission</h3>
+    <p>Correcting grammar or removing unnecessary words.</p>
+    <p><strong>Tip:</strong> Read carefully for tense, verb form, articles, etc.</p>
+
+    <h3>11. Gap Filling</h3>
+    <p>Fill blanks with suitable words (articles, modals, verbs).</p>
+
+    <h3>12. Sentence Reordering</h3>
+    <p>Rearrange jumbled words to form correct sentences.</p>
+    <p><strong>Example:</strong> "the / boy / playing / is / football" → The boy is playing football.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    document.querySelectorAll(".dropdown-btn").forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

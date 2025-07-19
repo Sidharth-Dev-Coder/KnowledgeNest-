@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Security in India - Class 9 Economics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+    a { color: black; text-decoration: none; }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374785;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f7a;
+      padding-left: 15px;
+    }
+
+    .main {
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul { margin-left: 20px; }
+    ul li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Question Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 4 – Food Security in India</h1>
+
+    <h2>Introduction</h2>
+    <p>Food security means availability, accessibility, and affordability of food to all people at all times. It is essential for the overall well-being and health of a nation’s population.</p>
+
+    <h2>What is Food Security?</h2>
+    <ul>
+      <li><strong>Availability:</strong> Sufficient food production in the country.</li>
+      <li><strong>Accessibility:</strong> Food is within the reach of every person.</li>
+      <li><strong>Affordability:</strong> Individuals have enough income to buy food.</li>
+    </ul>
+
+    <h2>Why Food Security?</h2>
+    <ul>
+      <li>To ensure people do not suffer from hunger or malnutrition.</li>
+      <li>During natural disasters like floods, droughts, or pandemics.</li>
+      <li>For a stable and healthy society.</li>
+    </ul>
+
+    <h2>Who are Food-Insecure People?</h2>
+    <ul>
+      <li>Landless rural laborers</li>
+      <li>Urban slum dwellers</li>
+      <li>SCs, STs, and backward communities</li>
+      <li>Pregnant women and children</li>
+      <li>People affected by natural calamities or displacement</li>
+    </ul>
+
+    <h2>Food Security in India</h2>
+    <p>India became self-sufficient in food grains due to the Green Revolution. The government has adopted various strategies like buffer stock and Public Distribution System (PDS) to maintain food security.</p>
+
+    <h2>Buffer Stock</h2>
+    <p>It refers to the stock of food grains maintained by the government to be used during shortage. It is maintained by the Food Corporation of India (FCI).</p>
+
+    <h2>Public Distribution System (PDS)</h2>
+    <p>PDS distributes food and other essentials at subsidized prices through Fair Price Shops (ration shops). It includes:</p>
+    <ul>
+      <li><strong>Ration cards:</strong> For identifying beneficiaries.</li>
+      <li><strong>TPDS:</strong> Targeted Public Distribution System introduced in 1997 for BPL families.</li>
+    </ul>
+
+    <h2>Other Poverty Alleviation Programmes</h2>
+    <ul>
+      <li>Antyodaya Anna Yojana (AAY)</li>
+      <li>National Food for Work Programme (NFWP)</li>
+      <li>Mid-Day Meal Scheme (MDMS)</li>
+    </ul>
+
+    <h2>Problems with PDS</h2>
+    <ul>
+      <li>Leakage of food grains</li>
+      <li>Poor quality of food</li>
+      <li>Corruption and black marketing</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Food security is not just about food availability but also ensuring it reaches the needy. Strengthening infrastructure, removing corruption, and increasing awareness are crucial for long-term success.</p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>
