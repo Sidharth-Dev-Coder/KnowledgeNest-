@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Constitutional Design - Class 9 Civics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+    a { color: black; text-decoration: none; }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374785;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f7a;
+      padding-left: 15px;
+    }
+
+    .main {
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul { margin-left: 20px; }
+    ul li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science Notes</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+       <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Questions Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 2 – Constitutional Design</h1>
+
+    <h2>Need for a Constitution</h2>
+    <p>A constitution provides a set of basic rules and principles for the functioning of a country. It reflects the aspirations of the people and ensures justice, liberty, and equality.</p>
+
+    <h2>Making of the Indian Constitution</h2>
+    <ul>
+      <li>India got independence on 15th August 1947.</li>
+      <li>The Constitution came into effect on 26th January 1950.</li>
+      <li>The Constitution was drafted by the Constituent Assembly formed in 1946.</li>
+      <li>Dr. B.R. Ambedkar was the Chairman of the Drafting Committee.</li>
+    </ul>
+
+    <h2>Role of the Constituent Assembly</h2>
+    <ul>
+      <li>The Assembly had 299 members.</li>
+      <li>It worked for 3 years (from 1946 to 1949).</li>
+      <li>It reflected the will of the people and included all communities and regions.</li>
+    </ul>
+
+    <h2>Features of the Indian Constitution</h2>
+    <ul>
+      <li>Lengthiest written Constitution in the world</li>
+      <li>Federal system with unitary features</li>
+      <li>Parliamentary system of government</li>
+      <li>Secular and democratic republic</li>
+      <li>Universal adult franchise</li>
+      <li>Fundamental Rights and Duties</li>
+      <li>Directive Principles of State Policy</li>
+    </ul>
+
+    <h2>Philosophy of the Constitution</h2>
+    <p>The values and vision of the Constitution are reflected in the Preamble.</p>
+
+    <h2>Preamble of the Indian Constitution</h2>
+    <p>
+      "We, the people of India, having solemnly resolved to constitute India into a Sovereign Socialist Secular Democratic Republic and to secure to all its citizens: Justice, Liberty, Equality, and Fraternity..."
+    </p>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>

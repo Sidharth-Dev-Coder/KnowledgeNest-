@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; height: 100vh; display: flex; flex-direction: column; }
+
+    .topbar {
+      height: 50px;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #1e3a8a;
+      color: white;
+      position: fixed;
+      top: 45px;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      padding-top: 20px;
+    }
+
+    .sidebar ul { list-style: none; }
+    .sidebar li { padding: 10px 20px; cursor: pointer; }
+    .sidebar li:hover { background-color: #3344aa; }
+
+    .dropdown > ul {
+      display: none;
+      background-color: #1e3a8a;
+    }
+    .dropdown.open > ul {
+      display: block;
+    }
+    .dropdown-toggle::after {
+      content: ' ';
+      float: right;
+    }
+
+    .main {
+      margin-left: 220px;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 50px);
+    }
+
+    .chat-container {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background-color: #f1f5f9;
+    }
+
+    .message {
+      margin: 10px 0;
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+    .bot { background-color: #e0e7ff; align-self: flex-start; }
+    .user { background-color: #bae6fd; align-self: flex-end; }
+
+    .input-bar {
+      display: flex;
+      padding: 10px;
+      background-color: white;
+      border-top: 1px solid #ccc;
+    }
+
+    .input-bar input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #aaa;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+
+    .input-bar button {
+      padding: 10px 20px;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .bot-icon {
+      position: fixed;
+      bottom: 70px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #1e3a8a;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        left: -220px;
+      }
+
+      .sidebar.active {
+        left: 0;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div onclick="toggleSidebar()" style="cursor:pointer;">☰</div>
+    <div><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+        <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fa fa-book"></i> Subjects</div>
+        <ul>
+        <li><a href="maths.html">Mathematics</a></li>
+          <li><a href="science.html">Science</a></li>
+          <li><a href="socialscience.html">Social Science</a></li>
+          <li><a href="english.html">English</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fa fa-file-alt"></i> Notes</div>
+        <ul>
+          <li><a href="mn.html">Mathematics</a></li>
+          <li><a href="sn.html">Science</a></li>
+          <li><a href="sstn.html">Social Science</a></li>
+          <li><a href="en.html">English</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fa fa-play-circle"></i> Videos</div>
+        <ul>
+          <li><a href="mvn.html">Mathematics</a></li>
+          <li><a href="svn.html">Science</a></li>
+          <li><a href="ssvn.html">Social Science</a></li>
+          <li><a href="evn.html">English</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <div class="dropdown-toggle" onclick="toggleDropdown(this)"><i class="fa fa-tools"></i> Additional Tools</div>
+        <ul>
+          <li><a href="chatbot.html">Sample Paper Generator</a></li>
+          <li><a href="chatbot.html">Question Solving</a></li>
+          <li><a href="game.html">Focus Game</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main Chat Area -->
+  <div class="main">
+    <div class="chat-container" id="chatArea">
+      <div class="message bot">Hello! I’m your KnowledgeNest Assistant 🤖</div>
+    </div>
+
+    <div class="input-bar">
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <!-- Bot Icon -->
+  <div class="bot-icon">
+    🤖
+  </div>
+
+  <script>
+    const apiKey = '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'; // ⚠️ Replace with your actual OpenRouter API key
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+
+    function toggleDropdown(elem) {
+      elem.parentElement.classList.toggle('open');
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const msg = input.value.trim();
+      if (!msg) return;
+
+      const chat = document.getElementById("chatArea");
+
+      // Display user message
+      const userDiv = document.createElement("div");
+      userDiv.className = "message user";
+      userDiv.textContent = msg;
+      chat.appendChild(userDiv);
+
+      input.value = "";
+
+      // Display bot typing
+      const botDiv = document.createElement("div");
+      botDiv.className = "message bot";
+      botDiv.textContent = "Typing...";
+      chat.appendChild(botDiv);
+      chat.scrollTop = chat.scrollHeight;
+
+      try {
+        const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            model: "openai/gpt-3.5-turbo",
+            messages: [{ role: "user", content: msg }]
+          })
+        });
+
+        const data = await response.json();
+        console.log("OpenRouter response:", data); // 🔴 Debug line
+
+        // Handle response safely
+        if (data.choices && data.choices.length > 0) {
+          botDiv.textContent = data.choices[0].message.content.trim();
+        } else if (data.error) {
+          botDiv.textContent = "❌ API Error: " + data.error.message;
+        } else {
+          botDiv.textContent = "❌ Unknown error occurred.";
+        }
+
+        chat.scrollTop = chat.scrollHeight;
+
+      } catch (err) {
+        console.error("Fetch error:", err);
+        botDiv.textContent = "⚠️ Error connecting to knowledgeNest.";
+      }
+    }
+  </script>
+</body>
+</html>

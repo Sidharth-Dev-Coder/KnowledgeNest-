@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electoral Politics - Class 9 Civics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f9f9f9; color: #333; }
+    a { color: black; text-decoration: none; }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1e3a8a;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      z-index: 1002;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #1e3a8a;
+      color: white;
+      overflow-y: auto;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1001;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar a, .dropdown-btn {
+      padding: 14px 25px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover {
+      background-color: #374785;
+    }
+
+    .dropdown-container {
+      display: none;
+      background-color: #2a3f7a;
+      padding-left: 15px;
+    }
+
+    .main {
+      padding: 80px 20px 20px 20px;
+      transition: margin-left 0.3s;
+    }
+
+    @media (min-width: 768px) {
+      .sidebar { left: 0; }
+      .main { margin-left: 250px; }
+      .menu-toggle { display: none; }
+    }
+
+    h1 {
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    ul { margin-left: 20px; }
+    ul li { margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="brand-text"><i class="fa fa-chain-broken"></i> KnowledgeNest</div>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="mySidebar">
+    <a href="index.html"><i class="fa fa-home"></i> Home</a>
+    <button class="dropdown-btn"><i class="fa fa-book"></i> Subjects</button>
+    <div class="dropdown-container">
+      <a href="maths.html">Mathematics</a>
+      <a href="science.html">Science</a>
+      <a href="socialscience.html">Social Science</a>
+      <a href="english.html">English</a>
+    </div>
+    <button class="dropdown-btn"><i class="fa fa-file-alt"></i> Notes</button>
+    <div class="dropdown-container">
+      <a href="mn.html">Mathematics</a>
+      <a href="sn.html">Science</a>
+      <a href="sstn.html">Social Science</a>
+      <a href="en.html">English</a>
+    </div>
+    <button class="dropdown-btn"><i class="fa fa-play-circle"></i> Videos</button>
+    <div class="dropdown-container">
+      <a href="mvn.html">Mathematics</a>
+      <a href="svn.html">Science</a>
+      <a href="ssvn.html">Social Science</a>
+      <a href="evn.html">English</a>
+    </div>
+    <button class="dropdown-btn"><i class="fa fa-tools"></i> Additional Tools</button>
+    <div class="dropdown-container">
+      <a href="chatbot.html">Sample Paper Generator</a>
+      <a href="chatbot.html">Questions Solving</a>
+      <a href="game.html">Focus Game</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Chapter 3 – Electoral Politics</h1>
+
+    <h2>Why Elections?</h2>
+    <ul>
+      <li>It is a mechanism to choose representatives by the people.</li>
+      <li>Ensures that leaders are accountable to the people.</li>
+    </ul>
+
+    <h2>What Makes an Election Democratic?</h2>
+    <ul>
+      <li>Free and fair elections</li>
+      <li>Universal adult franchise (18+ years)</li>
+      <li>Regular elections</li>
+      <li>Choice of candidates and parties</li>
+    </ul>
+
+    <h2>System of Elections in India</h2>
+    <ul>
+      <li>India has a parliamentary form of government.</li>
+      <li>Lok Sabha and State Assemblies are elected every 5 years.</li>
+      <li>Single-member constituencies with first-past-the-post system.</li>
+    </ul>
+
+    <h2>Election Process</h2>
+    <ul>
+      <li>Delimitation of constituencies</li>
+      <li>Preparation of voters’ list</li>
+      <li>Announcement of election schedule</li>
+      <li>Filing of nominations</li>
+      <li>Election campaign</li>
+      <li>Polling and counting of votes</li>
+    </ul>
+
+    <h2>Independent Election Commission</h2>
+    <ul>
+      <li>Conducts and oversees elections in India.</li>
+      <li>Ensures free and fair elections.</li>
+      <li>Has powers to implement code of conduct and punish offenders.</li>
+    </ul>
+
+    <h2>Challenges to Free and Fair Elections</h2>
+    <ul>
+      <li>Misuse of government machinery</li>
+      <li>Money and muscle power</li>
+      <li>Criminal background of candidates</li>
+      <li>Lack of internal democracy in political parties</li>
+    </ul>
+
+    <h2>Reforms Suggested</h2>
+    <ul>
+      <li>More power to Election Commission</li>
+      <li>Transparency in funding and candidate backgrounds</li>
+      <li>Reducing influence of money and caste in elections</li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("mySidebar").classList.toggle("open");
+    }
+
+    const dropdowns = document.querySelectorAll(".dropdown-btn");
+    dropdowns.forEach(btn => {
+      btn.addEventListener("click", function () {
+        const dropdown = this.nextElementSibling;
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+
+</body>
+</html>

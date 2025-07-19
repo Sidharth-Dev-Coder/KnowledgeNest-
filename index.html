@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to KnowledgeNest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #f9f9f9; color: #333;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 12px;
+    }
+
+    /* Dropdown menu */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #1e3a8a;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li {
+      display: block;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 8px 16px;
+      color: white;
+      font-weight: normal;
+    }
+
+    nav ul li:hover .dropdown-menu {
+      display: block;
+    }
+
+    .hero {
+      background: #1e3a8a;
+      color: white;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .hero-text {
+      max-width: 400px;
+    }
+
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      background: #3b82f6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .hero-img img {
+      width: 280px;
+    }
+
+    .subjects, .tip, .features {
+      padding: 30px 20px;
+      background: #fff;
+    }
+
+    .subjects h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .subject-card {
+      padding: 20px;
+      background: #eef;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .math { background: #dbeafe; }
+    .science { background: #d1fae5; }
+    .sst { background: #fef3c7; }
+    .english { background: #fde2e2; }
+
+    .tip {
+      background: #e0f2fe;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .feature {
+      flex: 1 1 300px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f0f0f0;
+    }
+
+    .video-card {
+      margin-top: 10px;
+      padding: 15px;
+      background: #e2e8f0;
+      border-radius: 8px;
+    }
+
+    .quiz button {
+      margin-top: 10px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .auth-container {
+      padding: 30px 20px;
+      background: #f8fafc;
+    }
+
+    .auth-form {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .auth-form h2 {
+      margin-bottom: 15px;
+    }
+
+    .auth-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .auth-form button {
+      padding: 10px 20px;
+      border: none;
+      background: #1e3a8a;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .logout-btn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: crimson;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .hidden {
+      display: none;
+    }
+    
+    .job a{
+        background-color: #3e87f6;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fa fa-chain-broken" aria-hidden="true"></i> KnowledgeNest</div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>
+        Home</a></li>
+
+        <li>
+          <a href="#"><i class="fa fa-book" aria-hidden="true"></i> Subjects</a>
+          <ul class="dropdown-menu">
+            <li><a href="maths.html">Mathematics</a></li>
+            <li><a href="science.html">Science</a></li>
+            <li><a href="socialscience.html">Social Science</a></li>
+            <li><a href="english.html">English</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fa fa-file-alt" aria-hidden="true"></i>
+
+Notes</a>
+          <ul class="dropdown-menu">
+            <li><a href="mn.html">Mathematics</a></li>
+            <li><a href="sn.html">Science</a></li>
+            <li><a href="sstn.html">Social Science</a></li>
+            <li><a href="en.html">English</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"><i class="fa fa-play-circle" aria-hidden="true"></i> Videos</a>
+          <ul class="dropdown-menu">
+            <li><a href="mvn.html">Mathematics</a></li>
+            <li><a href="svn.html">Science</a></li>
+            <li><a href="ssvn.html">Social Science</a></li>
+            <li><a href="evn.html">English</a></li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="#"><i class="fa fa-tools" aria-hidden="true"></i> Additional Tools</a>
+          <ul class="dropdown-menu">
+            <li><a href="chatbot.html">Sample Paper Genrator</a></li>
+            <li><a href="chatbot.html">Question Solving</a></li>
+            <li><a href="game.html">Focus Game</a></li>
+            <li><a href="https://drive.google.com/file/d/1-BhXF8XH6VVg6GSRtRSQZgnJFU2dM02S/view?usp=drivesdk">R.D. Shrama PDF</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <button id="logoutBtn" class="logout-btn hidden"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</button>
+  </header>
+
+  <!-- Auth Section -->
+  <div id="authSection" class="auth-container">
+    <div class="auth-form" id="loginForm">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+    </div>
+
+    <div class="auth-form hidden" id="signupForm">
+      <h2>Sign Up</h2>
+      <input type="text" id="signupUsername" placeholder="Username" />
+      <input type="password" id="signupPassword" placeholder="Password" />
+      <button onclick="signup()">Sign Up</button>
+      <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" class="hidden">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Learn Smart for 9th Class</h1>
+        <p>CBSE | ICSE | State Board</p>
+        <button onclick="saveProgress()">Save Progress</button>
+      </div>
+      <div class="hero-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="Student at desk">
+      </div>
+    </section>
+
+    <section class="subjects">
+      <h2>Subjects</h2>
+      <div class="subject-grid">
+        <div class="subject-card">Mathematics</div>
+        <div class="subject-card">Science</a></div>
+        <div class="subject-card">Social Science</a></div>
+        <div class="subject-card">English</a></div>
+      </div>
+    </section>
+
+    <section class="tip">
+      <strong>हर दिन एक नया कदम, सफलता की ओर!</strong>
+    </section>
+
+    <section class="features">
+      <div class="feature video">
+        <h3>Featured Videos</h3>
+        <div class="video-card">
+          <p>Ch 1 : Matters In Our Surroundings (Science)</p>
+        </div>
+      </div>
+      <div class="feature quiz">
+        <h3>Practice Tests</h3>
+        <p>Play the Game of the Focus!</p>
+        <button class="job"><a href="game.html">Test your Focus now!</a></button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+    const authSection = document.getElementById("authSection");
+    const mainContent = document.getElementById("mainContent");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    function toggleForms() {
+      loginForm.classList.toggle("hidden");
+      signupForm.classList.toggle("hidden");
+    }
+
+    function signup() {
+      const user = document.getElementById("signupUsername").value.trim();
+      const pass = document.getElementById("signupPassword").value.trim();
+      if (!user || !pass) {
+        alert("Please enter both username and password.");
+        return;
+      }
+      if (pass.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return;
+      }
+      localStorage.setItem(`user_${user}`, pass);
+      alert("Signup successful! Please login.");
+      toggleForms();
+    }
+
+    function login() {
+      const user = document.getElementById("loginUsername").value.trim();
+      const pass = document.getElementById("loginPassword").value.trim();
+      const storedPass = localStorage.getItem(`user_${user}`);
+      if (storedPass === pass) {
+        localStorage.setItem("loggedInUser", user);
+        showMainContent();
+      } else {
+        alert("Invalid credentials!");
+      }
+    }
+
+    function showMainContent() {
+      authSection.classList.add("hidden");
+      mainContent.classList.remove("hidden");
+      logoutBtn.classList.remove("hidden");
+    }
+
+    function saveProgress() {
+      const user = localStorage.getItem("loggedInUser");
+      if (user) {
+        localStorage.setItem(`progress_${user}`, "Chapter 1 completed");
+        alert("Progress saved!");
+      }
+    }
+
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      location.reload();
+    });
+
+    window.onload = () => {
+      const user = localStorage.getItem("loggedInUser");
+      if (user) showMainContent();
+    };
+  </script>
+</body>
+</html>
